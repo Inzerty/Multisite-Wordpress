@@ -1,0 +1,5 @@
+; php.ini.template - Exemple de configuration PHP
+display_errors = ${PHP_DISPLAY_ERRORS}
+memory_limit = ${PHP_MEMORY_LIMIT}
+upload_max_filesize = ${PHP_UPLOAD_MAX_FILESIZE}
+post_max_size = ${PHP_POST_MAX_SIZE}
