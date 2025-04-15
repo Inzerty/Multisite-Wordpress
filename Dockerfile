@@ -25,5 +25,9 @@ ENV PHP_DISPLAY_ERRORS=${PHP_DISPLAY_ERRORS} \
 # Génération du fichier php.ini
 RUN envsubst < /usr/local/etc/php/php.ini.template > /usr/local/etc/php/php.ini
 
+# Donne les droits d'écriture sur /var/www à www-data
+RUN mkdir -p /var/www/.vscode-server && \
+    chown -R www-data:www-data /var/www && \
+    chmod -R 775 /var/www
 # Lancement d’Apache
 CMD ["apache2-foreground"]

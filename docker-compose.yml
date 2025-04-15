@@ -19,6 +19,7 @@ services:
       - wordpress_data:/var/www/html
       - ./wp-config.php:/var/www/html/wp-config.php
       - ./.htaccess:/var/www/html/.htaccess
+      - vscode_server:/var/www/.vscode-server
     depends_on:
       - db
     user: "33:33"
@@ -51,3 +52,4 @@ volumes:
     name: multisite_gvt-wordpress_data
   db_data:
     name: multisite_gvt-db_data
+  vscode_server:
