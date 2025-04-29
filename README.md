@@ -53,3 +53,5 @@ PHP_POST_MAX_SIZE=64M
 
 # Réseau multisite
 DOMAIN_CURRENT_SITE=localhost
+
+* * * * * cd /home/franck/www/multisite-gvt && docker exec multisite_gvt-wordpress wp eval 'do_action("inzerty_cron_refresh_campaigns");' --quiet

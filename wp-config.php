@@ -31,7 +31,7 @@ define( 'NONCE_SALT', 'F7?F7MwF7J3z5s@1hHf[c|_+Er+2_Li5A|H-uw0:-7:G>|;c-~CW+`a.n
 
 // Augmenter la mémoire PHP pour éviter les erreurs de restauration WPvivid
 @ini_set( 'memory_limit', '2048M' );
-
+// define('WP_DEBUG', true);
 // Chemin absolu vers WordPress
 if (!defined('ABSPATH')) {
     define('ABSPATH', __DIR__ . '/');

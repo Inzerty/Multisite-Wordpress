@@ -29,5 +29,11 @@ RUN envsubst < /usr/local/etc/php/php.ini.template > /usr/local/etc/php/php.ini
 RUN mkdir -p /var/www/.vscode-server && \
     chown -R www-data:www-data /var/www && \
     chmod -R 775 /var/www
+
+# — Installer WP-CLI
+RUN curl -L https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
+    -o /usr/local/bin/wp \
+    && chmod +x /usr/local/bin/wp
+
 # Lancement d’Apache
 CMD ["apache2-foreground"]
