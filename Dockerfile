@@ -1,6 +1,6 @@
 # Dockerfile for WordPress with custom PHP settings
 
-FROM wordpress:6.7
+FROM wordpress:php8.2-apache
 
 # Installation de gettext + pdo_mysql pour WPvivid
 RUN apt-get update \
